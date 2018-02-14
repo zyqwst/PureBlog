@@ -1,0 +1,130 @@
+2018-02-14 21:56:13:054 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: jdk.version    => 1.8.0_121
+2018-02-14 21:56:13:056 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: user.dir       => /Users/albert/Documents/workspace/PureBert
+2018-02-14 21:56:13:057 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: java.io.tmpdir => /var/folders/rh/5j5fmv1s1xl43qlgqg00mwbc0000gn/T/
+2018-02-14 21:56:13:057 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: user.timezone  => Asia/Shanghai
+2018-02-14 21:56:13:057 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: file.encoding  => UTF-8
+2018-02-14 21:56:13:057 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | Environment: classpath      => /Users/albert/Documents/workspace/PureBert/target/classes
+2018-02-14 21:56:13:215 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/admin
+2018-02-14 21:56:13:215 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/categories.html
+2018-02-14 21:56:13:215 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/feed.xml
+2018-02-14 21:56:13:215 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/atom.xml
+2018-02-14 21:56:13:215 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/admin/page/new
+2018-02-14 21:56:13:216 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/tags
+2018-02-14 21:56:13:216 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/admin/article
+2018-02-14 21:56:13:216 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/feed
+2018-02-14 21:56:13:216 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/admin/index
+2018-02-14 21:56:13:216 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/admin/page/publish
+2018-02-14 21:56:13:217 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/admin/article/publish
+2018-02-14 21:56:13:217 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/admin/attach/upload
+2018-02-14 21:56:13:217 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/category/:keyword/:page.html
+2018-02-14 21:56:13:217 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/admin/comments/delete
+2018-02-14 21:56:13:218 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/admin/template/content
+2018-02-14 21:56:13:218 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/admin/article/publish
+2018-02-14 21:56:13:218 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/admin/template/save
+2018-02-14 21:56:13:218 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/admin/category/save
+2018-02-14 21:56:13:218 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/admin/profile
+2018-02-14 21:56:13:219 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/admin/attach
+2018-02-14 21:56:13:219 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/page/:page
+2018-02-14 21:56:13:219 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/admin/profile
+2018-02-14 21:56:13:219 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/admin/comments
+2018-02-14 21:56:13:219 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/categories
+2018-02-14 21:56:13:220 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/admin/advanced
+2018-02-14 21:56:13:220 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/search.html
+2018-02-14 21:56:13:220 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/admin/login
+2018-02-14 21:56:13:220 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/admin/themes/setting
+2018-02-14 21:56:13:220 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/install
+2018-02-14 21:56:13:221 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/admin/themes
+2018-02-14 21:56:13:221 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/article/:cid.html
+2018-02-14 21:56:13:221 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/admin/page/modify
+2018-02-14 21:56:13:221 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/tags.html
+2018-02-14 21:56:13:221 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/admin/page
+2018-02-14 21:56:13:222 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => ALL	/admin/attach/delete
+2018-02-14 21:56:13:222 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/sitemap
+2018-02-14 21:56:13:222 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/
+2018-02-14 21:56:13:222 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/search
+2018-02-14 21:56:13:222 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/admin/template
+2018-02-14 21:56:13:223 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/admin/password
+2018-02-14 21:56:13:223 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/sitemap.xml
+2018-02-14 21:56:13:223 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/admin/page/:cid
+2018-02-14 21:56:13:223 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/:cid.html
+2018-02-14 21:56:13:223 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/admin/category
+2018-02-14 21:56:13:223 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/category/:keyword/:page
+2018-02-14 21:56:13:224 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/search/:keyword/:page
+2018-02-14 21:56:13:224 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => ALL	/admin/page/delete
+2018-02-14 21:56:13:224 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/tag/:name/:page
+2018-02-14 21:56:13:224 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => ALL	/logout
+2018-02-14 21:56:13:224 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => ALL	/admin/article/delete
+2018-02-14 21:56:13:224 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/tag/:name.html
+2018-02-14 21:56:13:225 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/page/:page.html
+2018-02-14 21:56:13:225 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/admin/comments
+2018-02-14 21:56:13:225 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/search/:keyword.html
+2018-02-14 21:56:13:225 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/admin/setting
+2018-02-14 21:56:13:225 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/search/:keyword/:page.html
+2018-02-14 21:56:13:226 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/archives.html
+2018-02-14 21:56:13:226 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/comment
+2018-02-14 21:56:13:226 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/archives
+2018-02-14 21:56:13:226 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/tag/:name
+2018-02-14 21:56:13:226 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/category/:keyword.html
+2018-02-14 21:56:13:226 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/admin/article/:cid
+2018-02-14 21:56:13:226 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/article/:cid
+2018-02-14 21:56:13:227 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/install
+2018-02-14 21:56:13:227 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/admin/login
+2018-02-14 21:56:13:227 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/admin/themes/setting
+2018-02-14 21:56:13:227 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => ALL	/admin/category/delete
+2018-02-14 21:56:13:227 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/admin/comments/status
+2018-02-14 21:56:13:228 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/admin/setting
+2018-02-14 21:56:13:228 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/:cid
+2018-02-14 21:56:13:228 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/admin/article/modify
+2018-02-14 21:56:13:228 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/admin/reload
+2018-02-14 21:56:13:228 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/admin/themes/active
+2018-02-14 21:56:13:229 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/tag/:name/:page.html
+2018-02-14 21:56:13:229 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/category/:keyword
+2018-02-14 21:56:13:229 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => POST	/admin/backup
+2018-02-14 21:56:13:229 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add route => GET	/search/:keyword
+2018-02-14 21:56:13:230 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add hook  => [BEFORE	/.*]
+2018-02-14 21:56:13:230 INFO - [ _(:3」∠)_ ] c.b.m.r.RouteMatcher      | Add hook  => [AFTER	/.*]
+2018-02-14 21:56:13:322 INFO - [ _(:3」∠)_ ] c.b.j.Base                | ⬢ Blade-JDBC initializing
+2018-02-14 21:56:13:323 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | ⬢ Register bean: [com.blade.Environment@7812b69e, com.tale.init.WebContext@36fc705e, com.tale.service.ContentsService@4a5ec57b, com.tale.exception.GolbalExceptionHandler@5b9910b0, com.tale.service.SiteService@3652eb1b, com.tale.controller.admin.AuthController@6379030f, com.tale.service.OptionsService@5f307706, com.tale.controller.admin.ThemeController@4c3fe0c0, com.tale.controller.admin.CategoryController@6d14c06f, com.tale.service.CommentsService@465ec7b9, com.tale.controller.CategoryController@1a8a1033, com.tale.controller.IndexController@2980da42, com.tale.controller.admin.AttachController@62dc60a5, com.tale.hooks.BaseWebHook@528f1048, com.tale.controller.admin.PageController@184e89a2, com.tale.controller.admin.IndexController@37b31223, com.tale.controller.InstallController@366b9538, com.tale.controller.admin.CommentController@1cccdeed, com.tale.service.MetasService@70a3474f, com.tale.init.WebContext@36fc705e, com.tale.controller.admin.ArticleController@5fae6172, com.tale.hooks.BaseWebHook@528f1048, com.tale.controller.admin.TemplateController@3586fdea]
+2018-02-14 21:56:13:389 INFO - [ _(:3」∠)_ ] j.t.JetEngineImpl         | JetEngine.version = 2.1.5
+2018-02-14 21:56:13:390 INFO - [ _(:3」∠)_ ] j.t.JetEngineImpl         | JetEngine.loader = jetbrick.template.loader.ClasspathResourceLoader, root = /templates/, reload = true
+2018-02-14 21:56:13:397 INFO - [ _(:3」∠)_ ] j.t.r.c.ClassResolver     | import package: java.lang.*
+2018-02-14 21:56:13:398 INFO - [ _(:3」∠)_ ] j.t.r.c.ClassResolver     | import package: java.util.*
+2018-02-14 21:56:13:400 INFO - [ _(:3」∠)_ ] j.t.r.m.MethodInvokerResolver | import 38 methods from class jetbrick.template.runtime.buildin.JetMethods
+2018-02-14 21:56:13:402 INFO - [ _(:3」∠)_ ] j.t.r.f.FunctionInvokerResolver | import 11 functions from class jetbrick.template.runtime.buildin.JetFunctions
+2018-02-14 21:56:13:403 INFO - [ _(:3」∠)_ ] j.t.r.t.TagInvokerResolver | import 2 tags from class jetbrick.template.runtime.buildin.JetTags
+2018-02-14 21:56:13:405 INFO - [ _(:3」∠)_ ] j.t.r.GlobalResolver      | Scanning @JetMethods, @JetFunctions, @JetTags implements from [com.tale] ...
+2018-02-14 21:56:13:424 INFO - [ _(:3」∠)_ ] j.t.r.GlobalResolver      | Found 0 annotated classes, time elapsed 19 ms.
+2018-02-14 21:56:13:434 INFO - [ _(:3」∠)_ ] j.t.JetTemplateImpl       | Loading template: /comm/macros.html
+2018-02-14 21:56:13:588 INFO - [ _(:3」∠)_ ] j.t.r.f.FunctionInvokerResolver | import 21 functions from class com.tale.extension.Commons
+2018-02-14 21:56:13:589 INFO - [ _(:3」∠)_ ] j.t.r.f.FunctionInvokerResolver | import 50 functions from class com.tale.extension.Theme
+2018-02-14 21:56:13:589 INFO - [ _(:3」∠)_ ] j.t.r.f.FunctionInvokerResolver | import 2 functions from class com.tale.extension.AdminCommons
+2018-02-14 21:56:13:589 INFO - [ _(:3」∠)_ ] j.t.r.t.TagInvokerResolver | import 1 tags from class com.tale.extension.JetTag
+2018-02-14 21:56:14:020 DEBUG - [ _(:3」∠)_ ] c.b.j.c.ActiveRecord      | ⬢ Execute SQL => SELECT * FROM t_options
+2018-02-14 21:56:14:020 DEBUG - [ _(:3」∠)_ ] c.b.j.c.ActiveRecord      | ⬢ Parameters  => []
+2018-02-14 21:56:14:083 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | ⬢ Watched environment: true
+2018-02-14 21:56:14:126 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | ⬢ Use NioEventLoopGroup
+2018-02-14 21:56:14:274 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | ⬢ PureBert initialize successfully, Time elapsed: 1234 ms
+2018-02-14 21:56:14:275 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | ⬢ Blade start with 0.0.0.0:9000
+2018-02-14 21:56:14:275 INFO - [ _(:3」∠)_ ] c.b.s.n.NettyServer       | ⬢ Open your web browser and navigate to http://127.0.0.1:9000 ⚡
+2018-02-14 21:56:22:544 INFO - [ nio-worker@ thread-1 ] c.b.m.h.RequestExecution  | HTTP/1.0	GET	/
+2018-02-14 21:56:22:580 INFO - [ nio-worker@ thread-1 ] c.t.h.BaseWebHook         | UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36
+2018-02-14 21:56:22:581 INFO - [ nio-worker@ thread-1 ] c.t.h.BaseWebHook         | 用户访问地址: /, 来路地址: 127.0.0.1
+2018-02-14 21:56:24:044 INFO - [ nio-worker@ thread-2 ] c.b.m.h.RequestExecution  | HTTP/1.0	GET	/install
+2018-02-14 21:56:24:045 INFO - [ nio-worker@ thread-2 ] c.t.h.BaseWebHook         | UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36
+2018-02-14 21:56:24:045 INFO - [ nio-worker@ thread-2 ] c.t.h.BaseWebHook         | 用户访问地址: /install, 来路地址: 127.0.0.1
+2018-02-14 21:56:24:053 INFO - [ nio-worker@ thread-2 ] j.t.JetTemplateImpl       | Loading template: install.html
+2018-02-14 21:56:26:862 INFO - [ nio-worker@ thread-3 ] c.b.s.n.StaticFileHandler | HTTP/1.0	GET	/static/admin/plugins/jquery-steps/1.1.0/jquery.steps.css
+2018-02-14 21:56:29:453 INFO - [ nio-worker@ thread-4 ] c.b.s.n.StaticFileHandler | HTTP/1.0	GET	/static/admin/plugins/bootstrap/3.3.7/js/bootstrap.min.js
+2018-02-14 21:56:29:453 INFO - [ nio-worker@ thread-5 ] c.b.s.n.StaticFileHandler | HTTP/1.0	GET	/static/admin/plugins/limonte-sweetalert2/6.4.1/sweetalert2.min.css
+2018-02-14 21:56:29:464 INFO - [ nio-worker@ thread-6 ] c.b.s.n.StaticFileHandler | HTTP/1.0	GET	/static/admin/plugins/limonte-sweetalert2/6.4.1/sweetalert2.min.js
+2018-02-14 21:56:29:530 INFO - [ nio-worker@ thread-7 ] c.b.s.n.StaticFileHandler | HTTP/1.0	GET	/static/admin/plugins/jquery/3.2.1/jquery.min.js
+2018-02-14 21:56:29:624 INFO - [ nio-worker@ thread-8 ] c.b.s.n.StaticFileHandler | HTTP/1.0	GET	/static/admin/css/style.min.css
+2018-02-14 21:56:29:682 INFO - [ nio-worker@ thread-1 ] c.b.s.n.StaticFileHandler | HTTP/1.0	GET	/static/admin/plugins/bootstrap/3.3.7/css/bootstrap.min.css
+2018-02-14 21:56:30:257 INFO - [ nio-worker@ thread-2 ] c.b.s.n.StaticFileHandler | HTTP/1.0	GET	/static/admin/plugins/jquery-validate/1.15.1/jquery.validate.min.js
+2018-02-14 21:56:30:281 INFO - [ nio-worker@ thread-3 ] c.b.s.n.StaticFileHandler | HTTP/1.0	GET	/static/admin/plugins/jquery-validate/1.15.1/localization/messages_zh.min.js
+2018-02-14 21:56:30:331 INFO - [ nio-worker@ thread-4 ] c.b.s.n.StaticFileHandler | HTTP/1.0	GET	/static/admin/plugins/jquery-steps/1.1.0/jquery.steps.min.js
+2018-02-14 21:56:30:357 INFO - [ nio-worker@ thread-5 ] c.b.s.n.StaticFileHandler | HTTP/1.0	GET	/static/admin/js/base.js
+2018-02-14 21:56:30:379 INFO - [ nio-worker@ thread-6 ] c.b.s.n.StaticFileHandler | HTTP/1.0	GET	/static/admin/js/install.js
+2018-02-14 21:56:30:515 INFO - [ nio-worker@ thread-7 ] c.b.s.n.StaticFileHandler | HTTP/1.0	GET	/static/admin/images/bg/2.png
+2018-02-14 21:57:07:152 INFO - [ shutdown@thread ] c.b.s.n.NettyServer       | ⬢ Blade shutdown ...
+2018-02-14 21:57:07:154 INFO - [ shutdown@thread ] c.b.s.n.NettyServer       | ⬢ Blade shutdown successful
