@@ -13,28 +13,47 @@
     <div id="post-content" class="post-content" itemprop="articleBody">
         <p class="post-tags">${show_tags()}</p>
         ${show_content()}
-        <p class="post-info">
+        <!-- <p class="post-info">
             本文由 <a href="">${theme_option('author') ?! 'albertZhang'}</a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
                                                rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>最后编辑时间为:
             ${modified('yyyy/MM/dd HH:mm')}
-        </p>
+        </p> -->
     </div>
 </article>
 <div id="post-bottom-bar" class="post-bottom-bar">
     <div class="bottom-bar-inner">
-        <div class="bottom-bar-items social-share left">
-            <span class="bottom-bar-item">Share : </span>
-            <span class="bottom-bar-item bottom-bar-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=${permalink()}" target="_blank" title="${title()}" rel="nofollow">facebook</a></span>
-            <span class="bottom-bar-item bottom-bar-twitter"><a href="https://twitter.com/intent/tweet?url=${permalink()}&text=${title()}" target="_blank" title="${title()}" rel="nofollow">Twitter</a></span>
-            <span class="bottom-bar-item bottom-bar-weibo"><a href="http://service.weibo.com/share/share.php?url=${permalink()}&amp;title=${title()}" target="_blank" title="${title()}" rel="nofollow">Weibo</a></span>
-            <span class="bottom-bar-item bottom-bar-qrcode"><a href="//pan.baidu.com/share/qrcode?w=300&amp;h=300&amp;url=${permalink()}" target="_blank" rel="nofollow">QRcode</a></span>
-        </div>
+       <div class="bottom-bar-items social-share left" style="margin-top:1em">
+			<!-- JiaThis Button BEGIN -->
+			<div class="jiathis_style"><span class="jiathis_txt">分享到：</span>
+			<a class="jiathis_button_qzone"></a>
+			<a class="jiathis_button_tsina"></a>
+			<a class="jiathis_button_tqq"></a>
+			<a class="jiathis_button_renren"></a>
+			<a class="jiathis_button_kaixin001"></a>
+			<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+			<a class="jiathis_counter_style"></a>
+			</div>
+			<script type="text/javascript" >
+			var jiathis_config={
+				siteNum:5,
+				sm:"tsina,weixin,qzone,tqq,cqq",
+				summary:"",
+				shortUrl:false,
+				hideMore:false
+			}
+			</script>
+			<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+			<!-- JiaThis Button END -->
+
+        </div> 
+	    
         <div class="bottom-bar-items right">
             <span class="bottom-bar-item">${thePrev('→')}</span>
             <span class="bottom-bar-item">${theNext('←')}</span>
             <span class="bottom-bar-item"><a href="#footer">↓</a></span>
             <span class="bottom-bar-item"><a href="#">↑</a></span>
         </div>
+        
     </div>
 </div>
 #include('./partial/comments.html')
