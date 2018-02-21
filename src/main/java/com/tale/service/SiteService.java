@@ -233,23 +233,23 @@ public class SiteService {
         // 备份数据库
         if ("db".equals(bkType)) {
             
-            String bkAttachDir = AttachController.CLASSPATH + "upload/";
-            String sqlFileName = bkAttachDir + DateKit.toString(new Date(), fmt) + "_" + StringKit.rand(5) + ".sql";
+            String bkAttachDir = AttachController.CLASSPATH;
+            String sqlFileName =  "upload/"+DateKit.toString(new Date(), fmt) + "_" + StringKit.rand(5) + ".sql";
+            if(!new File(bkAttachDir+"upload/").exists()) {
+	            	Files.createDirectory(Paths.get(bkAttachDir+ "upload/"));
+            }
             
-            Files.createDirectory(Paths.get(sqlFileName));
-            
-            
-            String zipFile = sqlFileName.replace(".sql", ".zip");
+            String zipFileName =  sqlFileName.replace(".sql", ".zip");
 
             Backup backup = new Backup(new ActiveRecord().getSql2o().getDataSource().getConnection());
             String sqlContent = backup.execute();
 
-            File sqlFile = new File(sqlFileName);
+            File sqlFile = new File(bkAttachDir + sqlFileName);
             FileOutputStream fos = new FileOutputStream(sqlFile,false);
 	        fos.write(sqlContent.getBytes());  
 	        fos.close();
 
-            String zip = zipFile;
+            String zip = bkAttachDir + zipFileName;
             ZipUtils.zipFile(sqlFile.getPath(), zip);
 
             if (!sqlFile.exists()) {
@@ -257,7 +257,7 @@ public class SiteService {
             }
             sqlFile.delete();
 
-            backResponse.setSql_path(zipFile);
+            backResponse.setSql_path(zipFileName);
 
             // 10秒后删除备份文件
             new Timer().schedule(new TimerTask() {
