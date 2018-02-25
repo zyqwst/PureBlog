@@ -107,7 +107,19 @@
             </div>
         </div>
     </div>
-
+	<div class="col-md-6">
+        <div class="panel panel-color panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">同步电影</h3>
+            </div>
+            <div class="panel-body">
+                <form id="backupForm" class="form-inline" role="form">
+                    <button type="button" class="btn btn-success waves-effect waves-light m-l-10" onclick="sync('dy');">电影</button>
+                    <button type="button" class="btn btn-danger waves-effect waves-light m-l-10" onclick="sync('ds')">电视</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <div class="col-md-6">
         <div class="panel panel-color panel-success">
             <div class="panel-heading">
@@ -209,7 +221,22 @@
             $('#allow_install').val(0);
         }
     }
-
+	/**
+	*同步电影
+	*/
+    function sync(type) {
+        tale.post({
+            url: '/admin/sycn',
+            data:{'type':type},
+            success: function (result) {
+                if (result && result.success) {
+                    tale.alertOk('开始同步');
+                } else {
+                    tale.alertError(result.msg || '同步失败');
+                }
+            }
+        });
+    }
     $('.allow-1').toggles({
         on: true,
         text: {

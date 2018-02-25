@@ -27,8 +27,13 @@ import com.tale.model.entity.Logs;
 import com.tale.model.entity.Users;
 import com.tale.service.OptionsService;
 import com.tale.service.SiteService;
+import com.tale.spider.DataPipeline;
+import com.tale.spider.ZxdySpider;
+
 import jetbrick.util.ShellUtils;
 import lombok.extern.slf4j.Slf4j;
+import us.codecraft.webmagic.Site;
+import us.codecraft.webmagic.model.OOSpider;
 
 import java.io.File;
 import java.util.Arrays;
@@ -49,7 +54,9 @@ public class IndexController extends BaseController {
 
     @Inject
     private SiteService siteService;
-
+    
+    @Inject
+    private DataPipeline dataPipeline;
     /**
      * 仪表盘
      */
@@ -261,6 +268,25 @@ public class IndexController extends BaseController {
             TimeUnit.SECONDS.sleep(sleep);
         } catch (Exception e) {
             log.error("重启系统失败", e);
+        }
+    }
+    @Route(value = "sycn", method = HttpMethod.POST)
+    @JSON
+    public RestResponse sycn(@Param String type,Request request) {
+        try {
+        	System.out.println("=========="+type);
+        	OOSpider.create(Site.me().setSleepTime(300)
+                    , dataPipeline, ZxdySpider.class)
+                    .addUrl("https://www.dy2018.com/html/gndy/dyzz/index_297.html").thread(6).run();
+            return RestResponse.ok();
+        } catch (Exception e) {
+            String msg = "同步失败";
+            if (e instanceof TipException) {
+                msg = e.getMessage();
+            } else {
+                log.error(msg, e);
+            }
+            return RestResponse.fail(msg);
         }
     }
 }

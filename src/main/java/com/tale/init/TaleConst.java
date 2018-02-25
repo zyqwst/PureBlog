@@ -24,7 +24,7 @@ public class TaleConst {
     /**
      * 最大页码
      */
-    public static final int MAX_PAGE = 100;
+    public static final int MAX_PAGE = 9999;
 
     /**
      * 最大获取文章条数

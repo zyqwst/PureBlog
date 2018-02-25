@@ -90,7 +90,9 @@ public class ContentsService {
         contents.setContent(EmojiParser.parseToAliases(contents.getContent()));
 
         int time = DateKit.nowUnix();
-        contents.setCreated(time);
+        if(contents.getCreated()==null) {
+        	contents.setCreated(time);
+        }
         contents.setModified(time);
 
         String tags       = contents.getTags();
