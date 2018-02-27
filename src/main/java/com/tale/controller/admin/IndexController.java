@@ -13,6 +13,7 @@ import com.blade.mvc.annotation.Route;
 import com.blade.mvc.http.HttpMethod;
 import com.blade.mvc.http.Request;
 import com.blade.mvc.ui.RestResponse;
+import com.mysql.fabric.xmlrpc.base.Data;
 import com.tale.MyFilePipeline;
 import com.tale.Test;
 import com.tale.controller.BaseController;
@@ -61,6 +62,8 @@ public class IndexController extends BaseController {
     
     @Inject
     private DataProcessor dataProcessor;
+    @Inject
+    private DataPipeline dataPipeline;
     /**
      * 仪表盘
      */
@@ -281,7 +284,7 @@ public class IndexController extends BaseController {
         	System.out.println("=========="+type);
         	 Spider.create(dataProcessor).addUrl("https://www.dy2018.com/html/gndy/dyzz/index.html")
      		.thread(4)
-     		//.addPipeline(dataPipeline)
+     		.addPipeline(dataPipeline)
              .run();
             return RestResponse.ok();
         } catch (Exception e) {

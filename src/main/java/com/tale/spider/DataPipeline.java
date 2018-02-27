@@ -28,11 +28,6 @@ public class DataPipeline implements Pipeline{
     @Override
 	public void process(ResultItems resultItems, Task task) {
         try {
-      	  Contents contents = new Contents();
-      	  contents.setAuthorId(2);
-      	  contents.setFmtType("html");
-      	  contents.setType("post");
-      	  contents.setStatus("publish");
             for (Map.Entry<String, Object> entry : resultItems.getAll().entrySet()) {
                 if (entry.getValue() instanceof Iterable) {
                     Iterable value = (Iterable) entry.getValue();
@@ -41,28 +36,11 @@ public class DataPipeline implements Pipeline{
                     	System.out.println(o);
                     }
                 } else {
-                	  String key = entry.getKey();
-                	  Object value = entry.getValue();
-                	  if("categories".equals(key)) {
-                		  contents.setCategories(value.toString());
-                	  }else if("content".equals(key)) {
-                		  contents.setContent(value.toString());
-                	  }else if("created".equals(key)) {
-                		  if(value==null)value="0";
-                		  contents.setCreated(Integer.parseInt(value.toString()));
-                	  }else if("tabs".equals(key)) {
-                		  if(value==null) value="";
-                		  contents.setTags(value.toString());
-                	  }else if("title".equals(key)) {
-                		  if(value == null || StringUtils.isBlank(value.toString())) {
-                			  throw new Exception("标题为空："+resultItems.getRequest().getUrl()+contents);
-                		  }
-                		  contents.setTitle(value.toString());
-                	  }
+                	 Contents contents = (Contents) entry.getValue();
+                	 Long cid = contentsService.publish(contents);
+                	 if(cid==null) throw new Exception("保存失败："+resultItems.getRequest().getUrl()+contents);
                 }
             }
-            Long cid = contentsService.publish(contents);
-            if(cid==null) throw new Exception("保存失败："+resultItems.getRequest().getUrl()+contents);
         } catch (Exception e) {
             logger.error("Pipeline错误", e);
         }

@@ -10,6 +10,7 @@ import java.io.UnsupportedEncodingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.tale.model.entity.Contents;
 import com.tale.spider.formatter.CategoriesFomatter;
 import com.tale.spider.formatter.TimestampFomatter;
 
@@ -40,21 +41,35 @@ public class Test implements PageProcessor {
 	            //文章页 
 	        } 
 	        else {
-	        		page.putField("title", page.getHtml().xpath("//div[@class='title_all']/h1/text()"));
-	        		try {	
-	        			TimestampFomatter tf = new TimestampFomatter("yyyy-MM-dd");
-						page.putField("created", tf.format(page.getHtml().xpath("//span[@class='updatetime']/text()").get()));
+	        	Contents contents = new Contents();
+				contents.setAuthorId(2);
+				contents.setFmtType("html");
+				contents.setType("post");
+				contents.setStatus("publish");
+				contents.setTitle(page.getHtml().xpath("//div[@class='title_all']/h1/text()").toString());
+				try {
+					TimestampFomatter tf = new TimestampFomatter("yyyy-MM-dd");
+					contents.setCreated(tf.format(page.getHtml().xpath("//span[@class='updatetime']/text()").get()));
 				} catch (Exception e) {
-						e.printStackTrace();
-						logger.error(e.getMessage());
+					e.printStackTrace();
+					logger.error(e.getMessage());
 				}
-	        		page.putField("tags", page.getHtml().xpath("//div[@class='co_content8']//div[@class='position']/span[2]/html()").replace("类型：|<a href=\\S+\">|</a>", "").replace("\\s*", "").replace("/", ","));
-        			try {
-						page.putField("categories", new CategoriesFomatter().format(page.getHtml().xpath("//div[@id='Zoom']/html()").get().substring(0, 200)));
-					} catch (Exception e) {
-						e.printStackTrace();
-						logger.error(e.getMessage());
-					}
+				contents.setContent(page.getHtml().xpath("//div[@id='Zoom']")
+						.replace("请把www.dy2018.com分享给你的朋友,更多人使用，速度更快 电影天堂www.dy2018.com欢迎你每天来!",
+								"请把 超级电影 www.sviip.com分享给你的朋友,更多人使用，速度更快 超级电影www.sviip.com欢迎你每天来!")
+						.get());
+	
+				contents.setTags(page.getHtml().xpath("//div[@class='co_content8']//div[@class='position']/span[2]/html()")
+						.replace("类型：|<a href=\\S+\">|</a>", "").replace("\\s*", "").replace("/", ",").get());
+	
+				try {
+					contents.setCategories(new CategoriesFomatter()
+							.format(page.getHtml().xpath("//div[@id='Zoom']/html()").get().substring(0, 200)));
+				} catch (Exception e) {
+					e.printStackTrace();
+					logger.error(e.getMessage());
+				}
+				page.putField("contents", contents);
 	        }
 	    }
 
@@ -64,7 +79,7 @@ public class Test implements PageProcessor {
 	    }
 
 	    public static void main(String[] args) throws UnsupportedEncodingException, FileNotFoundException {
-	    	PrintWriter printWriter = new PrintWriter(new OutputStreamWriter(new FileOutputStream(new File("/Users/albert/Desktop/movie.txt")),"UTF-8"));
+	    	PrintWriter printWriter = new PrintWriter(new OutputStreamWriter(new FileOutputStream(new File("C:\\Users\\Administrator\\Desktop\\movie.txt")),"UTF-8"));
 	        Spider.create(new Test()).addUrl("https://www.dy2018.com/html/gndy/dyzz/index_270.html")
 	        		.thread(4)
 	        		.addPipeline(new MyFilePipeline(printWriter))

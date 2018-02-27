@@ -43,15 +43,14 @@ public class DataProcessor implements PageProcessor {
 	            //文章页 
 	        } 
 	        else {
-				Contents contents = new Contents();
+	        	Contents contents = new Contents();
 				contents.setAuthorId(2);
 				contents.setFmtType("html");
 				contents.setType("post");
 				contents.setStatus("publish");
-				page.putField("title", page.getHtml().xpath("//div[@class='title_all']/h1/text()"));
+				contents.setTitle(page.getHtml().xpath("//div[@class='title_all']/h1/text()").toString());
 				try {
 					TimestampFomatter tf = new TimestampFomatter("yyyy-MM-dd");
-					page.putField("created", tf.format(page.getHtml().xpath("//span[@class='updatetime']/text()").get()));
 					contents.setCreated(tf.format(page.getHtml().xpath("//span[@class='updatetime']/text()").get()));
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -67,7 +66,7 @@ public class DataProcessor implements PageProcessor {
 	
 				try {
 					contents.setCategories(new CategoriesFomatter()
-							.format(page.getHtml().xpath("//div[@id='Zoom']/html()").get().substring(0, 200)));
+							.format(page.getHtml().xpath("//div[@id='Zoom']/html()").replace("<img[^>]*>", "").get().substring(0, 200)));
 				} catch (Exception e) {
 					e.printStackTrace();
 					logger.error(e.getMessage());
