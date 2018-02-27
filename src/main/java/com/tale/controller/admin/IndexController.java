@@ -13,6 +13,8 @@ import com.blade.mvc.annotation.Route;
 import com.blade.mvc.http.HttpMethod;
 import com.blade.mvc.http.Request;
 import com.blade.mvc.ui.RestResponse;
+import com.tale.MyFilePipeline;
+import com.tale.Test;
 import com.tale.controller.BaseController;
 import com.tale.exception.TipException;
 import com.tale.extension.Commons;
@@ -28,11 +30,13 @@ import com.tale.model.entity.Users;
 import com.tale.service.OptionsService;
 import com.tale.service.SiteService;
 import com.tale.spider.DataPipeline;
+import com.tale.spider.DataProcessor;
 import com.tale.spider.ZxdySpider;
 
 import jetbrick.util.ShellUtils;
 import lombok.extern.slf4j.Slf4j;
 import us.codecraft.webmagic.Site;
+import us.codecraft.webmagic.Spider;
 import us.codecraft.webmagic.model.OOSpider;
 
 import java.io.File;
@@ -56,7 +60,7 @@ public class IndexController extends BaseController {
     private SiteService siteService;
     
     @Inject
-    private DataPipeline dataPipeline;
+    private DataProcessor dataProcessor;
     /**
      * 仪表盘
      */
@@ -275,9 +279,10 @@ public class IndexController extends BaseController {
     public RestResponse sycn(@Param String type,Request request) {
         try {
         	System.out.println("=========="+type);
-        	OOSpider.create(Site.me().setSleepTime(300)
-                    , dataPipeline, ZxdySpider.class)
-                    .addUrl("https://www.dy2018.com/html/gndy/dyzz/index_297.html").thread(6).run();
+        	 Spider.create(dataProcessor).addUrl("https://www.dy2018.com/html/gndy/dyzz/index.html")
+     		.thread(4)
+     		//.addPipeline(dataPipeline)
+             .run();
             return RestResponse.ok();
         } catch (Exception e) {
             String msg = "同步失败";

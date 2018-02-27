@@ -10,6 +10,11 @@ public class TimestampFomatter implements ObjectFormatter<Integer> {
 
 	    private String template;
 	    
+		public TimestampFomatter() {
+		}
+	    public TimestampFomatter(String template) {
+	    		this.template = template;
+	    }
 	    @Override
 	    public Integer format(String raw) throws Exception {
 	    	if(raw==null || StringUtils.isBlank(raw)) return null;
